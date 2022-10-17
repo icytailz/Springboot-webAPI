@@ -1,5 +1,7 @@
 package com.example.sburrestdemo;
 
+import java.util.UUID;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -21,7 +23,7 @@ class Coffee {
 		this.name = name;
 	}
 
-	public Coffee(string name) {
+	public Coffee(String name) {
 		this(UUID.randomUUID().toString(), name); //create a unique id if none provided upon creation of Coffee
 	}
 
