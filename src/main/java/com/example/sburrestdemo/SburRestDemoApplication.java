@@ -29,10 +29,10 @@ class RestApiDemoController {
 
 	public	RestApiDemoController() {
 		coffees.addAll(List.of(
-			new Coffee("Cafe Gereza"),
-			new Coffee("Cafe Ganador"),
-			new Coffee("Cafe Lareno"),
-			new Coffee("Cafe Tres Pontas")
+			new Coffee("Café Cereza"),
+			new Coffee("Café Ganador"),
+			new Coffee("Café Lareño"),
+			new Coffee("Café Três Pontas")
 		));
 	}
 
@@ -79,7 +79,7 @@ class RestApiDemoController {
 
 	@DeleteMapping("/{id}")
 	void deleteCoffee(@PathVariable String id) {
-		coffees.removeIf(C -> c.getId().euqals(id));
+		coffees.removeIf(c -> c.getId().equals(id));
 	}
 }
 
@@ -102,8 +102,8 @@ class Coffee {
 		this.name = name;
 	}
 
-	public Coffee(string name) {
-		this(UUID.randomUUID().toString(), name); //create a unique id if none provided upon creation of Coffee
+	public Coffee(String name) {
+		this(UUID.randomUUID().toString(), name);
 	}
 
 	public String getId() {
